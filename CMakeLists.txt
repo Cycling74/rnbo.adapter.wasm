@@ -11,6 +11,8 @@ set(RNBO_DESCRIPTION_FILE "" CACHE FILEPATH "path to description.json")
 set(RNBO_CPP_DIR ${CMAKE_CURRENT_LIST_DIR}/../../)
 
 add_definitions(-std=c++11)
+add_definitions(-DRNBO_SIMPLEENGINE=1)
+add_definitions(-DRNBO_NO_INT64=1)
 
 if (CMAKE_BUILD_TYPE STREQUAL Release)
 	add_definitions(-O3)
